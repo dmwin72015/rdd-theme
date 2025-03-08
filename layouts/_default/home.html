@@ -1,0 +1,13 @@
+{{ define "main" }}
+<div>{{ .Content }}</div>
+<div class="container mx-auto">
+  <div class="grid grid-cols-2 place-content-start">
+    {{ range site.RegularPages }}
+    <div class="p-3">
+      <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+      <p>{{ .Summary }}</p>
+    </div>
+    {{ end }}
+  </div>
+</div>
+{{ end }}
